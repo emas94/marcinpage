@@ -1,0 +1,21 @@
+@import '@/styles/colors/colors.scss';
+
+
+.wrapper {
+ display: flex;
+ flex-direction: column;
+ color: $whiteText;
+ position: absolute;
+ z-index: 11;
+ bottom: 40vh;
+ left: 2rem;
+ h1{
+  font-size: 64px;
+  font-weight: 600;
+}
+p{
+  font-size: 24px;
+  font-weight: 500;
+}
+}
+

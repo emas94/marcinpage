@@ -1,0 +1,19 @@
+@import '@/styles/colors/colors.scss';
+
+.wrapper{
+  display: flex;
+  height: 40rem;
+  gap: 1rem;
+  padding: 4rem;
+  & > div{
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    // background-size: auto 100%;
+    transition: all .8s cubic-bezier(.25,.4,.45,1.4);
+    &:hover{
+      flex: 5;
+    }
+  }
+}

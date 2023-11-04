@@ -1,0 +1,44 @@
+@import '@/styles/colors/colors.scss';
+
+.wrapper{
+  transform: translateX(-100%);
+  overflow: hidden;
+  transform-origin: top;
+  &.show{
+    animation: 1s show both ;
+  }
+  &:not(.show) {
+    animation: 1s slideOut both;
+  }
+}
+@keyframes slideOut {
+  from {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%) scale(0);
+    opacity: 0;
+  }
+}
+@keyframes show{
+  from{
+    transform: translateX(-100%) scale(0);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0) scale(1);
+    opacity: 1;
+
+  }
+}
+
+@keyframes showY{
+  from{
+    transform: translateY(100%);
+  }
+  to{
+    transform: translateY(0);
+
+  }
+}

@@ -1,0 +1,22 @@
+@import '@/styles/colors/colors.scss';
+.bar {
+background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,0) 10%, rgba(22,22,22,1) 100%);
+padding: 1.3rem 2rem;
+padding-bottom: 0;
+display: flex;
+align-self: flex-start;
+justify-content: space-between;
+position: absolute;
+top:0 ;
+z-index: 10;
+width: 100%;
+}
+
+.logo{
+  width: 200px;
+  height: 100px;
+  background: url('./logo.png') top  no-repeat;
+  background-size: contain;
+  transform: translate(-3rem, -1rem);
+}

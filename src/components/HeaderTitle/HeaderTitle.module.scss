@@ -1,0 +1,76 @@
+@import '@/styles/colors/colors.scss';
+
+.wrapper{
+ .title{
+  overflow: hidden;
+  margin-bottom: 20px;
+  h4{
+    transform: translateX(-100%);
+    font-size: 38px;
+    position: relative;
+    padding: 5px 0;
+    display: inline-block;
+    &:not(.show) {
+      animation: 1s 1s slideOut both;
+      &::before{
+        animation:  0.5s 0.5s slideOut both;
+      }
+      & + .subTitle{
+        animation: 1s slideOut both;
+      }
+    }
+    &.show{
+      animation: 0.5s show both; 
+      &::before{
+        animation: 0.5s 0.5s show both; 
+      }
+      & + .subTitle{
+        animation: 0.5s 0.5s showY both; 
+      }
+      
+    }
+
+    &::before{
+      content: '';
+      position: absolute;
+      height: 4px;
+      width: 60%;
+      bottom: 0;
+      left: 0;
+      background-color: orange;
+      transform: translateX(-100%);
+    }
+  }
+ }
+}
+.subTitle{
+  margin-top: 5px;
+  font-size: 18px;
+  transform: translateY(100%);
+}
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes show{
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0);
+
+  }
+}
+@keyframes showY{
+  from{
+    transform: translateY(100%);
+  }
+  to{
+    transform: translateY(0);
+
+  }
+}
