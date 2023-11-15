@@ -1,63 +1,62 @@
-@import '@/styles/colors/colors.scss';
-
+@import "@/styles/colors/colors.scss";
 
 .wrapper {
- display: flex;
- justify-content: space-around;
- align-items: center;
- color: $whiteText;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: $whiteText;
   background-color: $backgroundTransparent;
- height: 20vh;
+  height: 20vh;
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+    gap: 30px;
+    height: auto;
+  }
 }
-.topText{
+.topText {
   font-size: 68px;
   font-weight: bold;
   position: relative;
   z-index: 50;
   text-align: center;
-  font-family: 'Raleway', sans-serif;
-
-
+  font-family: "Raleway", sans-serif;
 }
-.firstAnimation{
-  animation: 1s ShowFirst both ;
+.firstAnimation {
+  animation: 1s ShowFirst both;
 }
-.secondAnimation{
-  animation: 1s ShowSecond both ;
+.secondAnimation {
+  animation: 1s ShowSecond both;
 }
-.thirdAnimation{
-  animation: 1s ShowThird both ;
+.thirdAnimation {
+  animation: 1s ShowThird both;
 }
-.bottomText{
+.bottomText {
   font-size: 34px;
-  
-  font-family: 'Raleway', sans-serif;
+
+  font-family: "Raleway", sans-serif;
 }
 
-@keyframes ShowFirst{
-  from{
+@keyframes ShowFirst {
+  from {
     transform: translate(-100vw, -100vw);
   }
-  to{
+  to {
     transform: translate(0, 0);
-
   }
 }
-@keyframes ShowSecond{
-  from{
+@keyframes ShowSecond {
+  from {
     transform: translateY(-100vh);
   }
-  to{
+  to {
     transform: translateY(0);
-    
   }
 }
-@keyframes ShowThird{
-  from{
+@keyframes ShowThird {
+  from {
     transform: translate(100vw, -100vw);
   }
-  to{
+  to {
     transform: translate(0, 0);
-
   }
 }

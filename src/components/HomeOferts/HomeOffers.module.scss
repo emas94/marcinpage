@@ -1,4 +1,4 @@
-@import '@/styles/colors/colors.scss';
+@import "@/styles/colors/colors.scss";
 
 .wrapper {
   display: flex;
@@ -6,6 +6,9 @@
   margin: 4rem;
   min-height: 100vh;
   overflow: hidden;
+  @media screen and (max-width: 992px) {
+    margin: 1rem;
+  }
 }
 
 .offersWrapper {
@@ -14,6 +17,11 @@
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+    gap: 30px;
+    height: auto;
+  }
 
   .wrapperItem {
     opacity: 1;
@@ -54,7 +62,10 @@
       color: black;
       padding: 10px;
       border-radius: 5px;
-      transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+      transition:
+        opacity 0.3s,
+        visibility 0.3s,
+        transform 0.3s;
       border-radius: 1rem;
       font-size: 2rem;
       font-weight: 600;

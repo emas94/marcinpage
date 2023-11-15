@@ -1,11 +1,13 @@
-@import '@/styles/colors/colors.scss';
-
+@import "@/styles/colors/colors.scss";
 
 .wrapper {
-  ul{
+  ul {
     display: flex;
     gap: 10px;
-    li{
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+    }
+    li {
       list-style-type: none;
       cursor: pointer;
       position: relative;
@@ -14,20 +16,22 @@
       color: $whiteText;
       letter-spacing: 2px;
       font-size: 20px;
-      &:hover::before{
+      @media screen and (max-width: 992px) {
+        text-align: right;
+      }
+      &:hover::before {
         transform: translateY(-100%);
       }
-      &::before{
-        content: '';
+      &::before {
+        content: "";
         position: absolute;
         width: 100%;
         height: 3px;
         background-color: $secondary;
         bottom: 0;
         transform: translateY(100%);
-        transition: .2s;
+        transition: 0.2s;
       }
     }
   }
 }
-
