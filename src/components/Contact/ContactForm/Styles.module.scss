@@ -1,0 +1,54 @@
+.formWrapper {
+    margin: auto;
+    padding: 50px;
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 80px;
+}
+
+.heading {
+    margin-bottom: 20px;
+    font-size: 38px;
+}
+
+.formGroup {
+    margin-top: 30px;
+    flex-basis: calc(50% - 30px);
+}
+
+.contactForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.message textarea {
+    height: 500px;
+}
+
+.input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    border-radius: 8px;
+    font-size: 18px;
+    width: 100px;
+}

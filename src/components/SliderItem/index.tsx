@@ -1,12 +1,13 @@
-
-
-import { StaticImageData } from 'next/image'
-import styles from './SliderItem.module.scss'
+import { StaticImageData } from "next/image";
+import styles from "./SliderItem.module.scss";
 interface SliderItemInterface {
-  image: StaticImageData
+  image: StaticImageData;
 }
-const SliderItem = ({image}:SliderItemInterface) =>  <div className={styles.wrapper} style={{backgroundImage: `url(${image.src})`}}/>
-  
+const SliderItem = ({ image }: SliderItemInterface) => (
+  <div
+    className={styles.wrapper}
+    style={{ backgroundImage: `url(${image.src})` }}
+  />
+);
 
-
-export default SliderItem
+export default SliderItem;

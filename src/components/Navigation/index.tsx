@@ -1,15 +1,22 @@
+import styles from "./Navigation.module.scss";
+import Link from "next/link";
 
-import styles from './Navigation.module.scss'
-const Navigation = () =>{
-
-  return(   <div className={styles.wrapper}>
+const Navigation = () => {
+  return (
+    <div className={styles.wrapper}>
       <ul>
-        <li>O nas</li>
-        <li>Oferta</li>
-        <li>Kontakt</li>
+        <li>
+          <Link href="/">O nas</Link>
+        </li>
+        <li>
+          <Link href="/#oferta">Oferta</Link>
+        </li>
+        <li>
+          <Link href="/contact">Kontakt</Link>
+        </li>
       </ul>
-     </div>)
-  
-}
+    </div>
+  );
+};
 
-export default Navigation
+export default Navigation;
